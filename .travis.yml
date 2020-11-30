@@ -1,0 +1,10 @@
+language: go
+arch: amd64          # optional, this is default, routes to a full VM
+os: linux            # optional, this is default
+dist: bionic
+before_script:
+  - go vet ./...
+install:
+  # Add Godeps dependencies to GOPATH and PATH
+  - export GOPATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace:$GOPATH"
+  - export PATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace/bin:$PATH"
