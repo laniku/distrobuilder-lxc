@@ -4,13 +4,12 @@ virt: lxd             # required, routes to an LXD container
 os: linux             # required for arch different than amd64
 dist: focal           # or bionic | xenial with xenial as default
 group: edge
-before_script:
-  - wget https://linuxcontainers.org/downloads/distrobuilder/distrobuilder-1.1.tar.gz --directory-prefix=/tmp/
 install:
   - export GOPATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace:$GOPATH"
   - export PATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace/bin:$PATH"
   - echo "${TRAVIS_BUILD_DIR}"
   - cd /tmp
+  - wget https://linuxcontainers.org/downloads/distrobuilder/distrobuilder-1.1.tar.gz --directory-prefix=/tmp/
   - ls
   - tar -xvf /tmp/distrobuilder-1.1.tar.gz
   - cd distrobuilder-1.1
