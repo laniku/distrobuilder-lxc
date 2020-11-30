@@ -1,5 +1,5 @@
 language: go
-arch: arm64-graviton2 # in AWS over Graviton2 CPU
+arch: amd64
 virt: lxd             # required, routes to an LXD container
 os: linux             # required for arch different than amd64
 dist: focal           # or bionic | xenial with xenial as default
