@@ -1,7 +1,9 @@
 language: go
-arch: amd64          # optional, this is default, routes to a full VM
-os: linux            # optional, this is default
-dist: bionic
+arch: arm64-graviton2 # in AWS over Graviton2 CPU
+virt: lxd             # required, routes to an LXD container
+os: linux             # required for arch different than amd64
+dist: focal           # or bionic | xenial with xenial as default
+group: edge
 before_script:
   - go get -v -x github.com/lxc/distrobuilder/distrobuilder
 install:
