@@ -16,4 +16,4 @@ install:
   - mkdir -p ContainerImages/ubuntu/
   - cd ContainerImages/ubuntu/
   - curl -O https://raw.githubusercontent.com/lxc/lxc-ci/master/images/alpine.yaml
-  - sudo distrobuilder build-lxc alpine.yaml
+  - sudo distrobuilder build-lxc alpine.yaml -o image.release=3.10
