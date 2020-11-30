@@ -11,4 +11,4 @@ install:
   - export PATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace/bin:$PATH"
   - tar -xvf distrobuilder-1.1.tar.gz
   - cd distrobuilder-1.1
-  -ls
+  - ls
