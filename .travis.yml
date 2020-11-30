@@ -14,3 +14,9 @@ install:
   - tar -xvf /tmp/distrobuilder-1.1.tar.gz
   - cd distrobuilder-1.1
   - ls
+  - sudo apt install snapd
+  - sudo snap install distrobuilder --classic
+  - mkdir -p ContainerImages/ubuntu/
+  - cd ContainerImages/ubuntu/
+  - cp /tmp/distrobuilder-1.1/doc/examples/ubuntu.yaml ubuntu.yaml
+  - sudo distrobuilder build-lxc ubuntu.yaml
