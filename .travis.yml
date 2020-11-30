@@ -7,10 +7,8 @@ group: edge
 before_script:
   - wget https://linuxcontainers.org/downloads/distrobuilder/distrobuilder-1.1.tar.gz
 install:
-  # Add Godeps dependencies to GOPATH and PATH
   - export GOPATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace:$GOPATH"
   - export PATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace/bin:$PATH"
-  # Extract and link distrobuilder
   - tar -xvf distrobuilder-1.1.tar.gz
   - cd distrobuilder-1.1
   -ls
