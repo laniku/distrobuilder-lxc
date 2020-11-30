@@ -17,4 +17,4 @@ install:
   - mkdir -p ContainerImages/ubuntu/
   - cd ContainerImages/ubuntu/
   - cp /tmp/distrobuilder-1.1/doc/examples/ubuntu.yaml ubuntu.yaml
-  - sudo distrobuilder build-lxc ubuntu.yaml
+  - sudo distrobuilder build-lxd ubuntu.yaml
