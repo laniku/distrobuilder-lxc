@@ -15,5 +15,5 @@ install:
   - sudo snap install distrobuilder --edge --classic
   - mkdir -p ContainerImages/ubuntu/
   - cd ContainerImages/ubuntu/
-  - cp /tmp/distrobuilder-1.1/doc/examples/ubuntu.yaml ubuntu.yaml
-  - sudo distrobuilder build-lxd ubuntu.yaml
+  - curl -O https://raw.githubusercontent.com/lxc/lxc-ci/master/images/alpine.yaml
+  - sudo distrobuilder build-lxc alpine.yaml
