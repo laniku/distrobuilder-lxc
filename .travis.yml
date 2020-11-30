@@ -3,7 +3,7 @@ arch: amd64          # optional, this is default, routes to a full VM
 os: linux            # optional, this is default
 dist: bionic
 before_script:
-  - go vet ./...
+  - go get -v -x github.com/lxc/distrobuilder/distrobuilder
 install:
   # Add Godeps dependencies to GOPATH and PATH
   - export GOPATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace:$GOPATH"
