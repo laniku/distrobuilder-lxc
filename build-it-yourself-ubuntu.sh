@@ -16,4 +16,4 @@ cd $HOME/distrobuilder-lxc/
 rm -rf distrobuilder-1.1
 cd ContainerImages/distro/
 ls
-echo "The distro compilation is finished, it is in lxc format.
+echo "The distro compilation is finished, it is in lxc format."
