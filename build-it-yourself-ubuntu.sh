@@ -11,7 +11,7 @@ sudo snap install distrobuilder --edge --classic
 mkdir -p ContainerImages/distro/
 cd ContainerImages/distro/
 curl -O https://raw.githubusercontent.com/lxc/lxc-ci/master/images/alpine.yaml
-sudo distrobuilder build-lxc alpine.yaml -o image.release=3.10
+sudo distrobuilder build-lxc alpine.yaml -o image.release=3.12
 cd $HOME/distrobuilder-lxc/
 rm -rf distrobuilder-1.1
 cd ContainerImages/distro/
