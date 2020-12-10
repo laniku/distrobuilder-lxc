@@ -4,7 +4,7 @@
 
 Building a distro only using github and travis-ci...
 
-The distro is based off of alpine 3.10
+The distro is based off of alpine 3.12
 
 Your output should be similar to [this](https://travis-ci.com/github/puntillol59/distrobuilder-lxc/jobs/451065771)
 
