@@ -17,5 +17,5 @@ install:
   - cd ContainerImages/distro/
   - curl -O https://raw.githubusercontent.com/lxc/lxc-ci/master/images/alpine.yaml
 script:
-  - sudo distrobuilder build-lxc alpine.yaml -o image.release=3.10
+  - sudo distrobuilder build-lxc alpine.yaml -o image.release=3.12
   - ls
