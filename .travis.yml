@@ -16,7 +16,8 @@ install:
   - mkdir -p ContainerImages/distro/
   - cd ContainerImages/distro/
   - curl -O https://raw.githubusercontent.com/lxc/lxc-ci/master/images/debian.yaml
-  - sudo apt install debootstrap -y
+  - wget http://archive.ubuntu.com/ubuntu/pool/main/d/debootstrap/debootstrap_1.0.123ubuntu2_all.deb
+  - sudo dpkg -i debootstrap_1.0.123ubuntu2_all.deb
 script:
   - sudo distrobuilder build-lxc debian.yaml -o image.release=sid
   - ls
