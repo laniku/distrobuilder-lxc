@@ -3,6 +3,7 @@ virt: lxd             # required, routes to an LXD container
 os: linux             # required for arch different than amd64
 dist: focal           # or bionic | xenial with xenial as default
 group: edge
+language: go
 install:
   - export GOPATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace:$GOPATH"
   - export PATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace/bin:$PATH"
