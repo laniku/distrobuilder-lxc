@@ -10,7 +10,7 @@ sudo apt install snapd
 sudo snap install distrobuilder --edge --classic
 mkdir -p ContainerImages/distro/
 cd ContainerImages/distro/
-curl -O https://raw.githubusercontent.com/puntillol59/distrobuilder-lxc/debian-distro/debian.yaml
+curl -O https://raw.githubusercontent.com/lxc/lxc-ci/master/images/debian.yaml
 sudo distrobuilder build-lxc debian.yaml -o image.release=sid
 cd $HOME/distrobuilder-lxc/
 rm -rf distrobuilder-1.1

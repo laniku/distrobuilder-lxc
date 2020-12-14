@@ -1,8 +1,6 @@
-arch: arm64-graviton2 # in AWS over Graviton2 CPU
-virt: lxd             # required, routes to an LXD container
-os: linux             # required for arch different than amd64
-dist: focal           # or bionic | xenial with xenial as default
-group: edge
+arch: amd64          # optional, this is default, routes to a full VM
+os: linux            # optional, this is default
+dist: focal          # or bionic | xenial | trusty | precise with xenial as default
 language: go
 install:
   - export GOPATH="${TRAVIS_BUILD_DIR}/Godeps/_workspace:$GOPATH"
@@ -13,11 +11,13 @@ install:
   - ls
   - tar -xvf /tmp/distrobuilder-1.1.tar.gz
   - cd distrobuilder-1.1
-  - sudo apt install snapd
+  - sudo apt install snapd -y
   - sudo snap install distrobuilder --edge --classic
   - mkdir -p ContainerImages/distro/
   - cd ContainerImages/distro/
-  - curl -O https://raw.githubusercontent.com/puntillol59/distrobuilder-lxc/debian-distro/debian.yaml
+  - curl -O https://raw.githubusercontent.com/lxc/lxc-ci/master/images/debian.yaml
+  - wget http://archive.ubuntu.com/ubuntu/pool/main/d/debootstrap/debootstrap_1.0.123ubuntu2_all.deb
+  - sudo dpkg -i debootstrap_1.0.123ubuntu2_all.deb
 script:
   - sudo distrobuilder build-lxc debian.yaml -o image.release=sid
   - ls
