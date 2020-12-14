@@ -4,8 +4,8 @@
 
 Building a distro only using github and travis-ci...
 
-The distro is based off of alpine 3.12
+The distro is based off of Debian Sid
 
-Your output should be similar to [this](https://travis-ci.com/github/puntillol59/distrobuilder-lxc/jobs/451065771)
+Your output should be similar to [this](https://travis-ci.com/github/puntillol59/distrobuilder-lxc/jobs/459543688)
 
 This is possible by [LinuxContainers](https://linuxcontainers.org/)
