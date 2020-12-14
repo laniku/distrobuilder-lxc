@@ -17,7 +17,7 @@ install:
   - sudo snap install distrobuilder --edge --classic
   - mkdir -p ContainerImages/distro/
   - cd ContainerImages/distro/
-  - curl -O https://raw.githubusercontent.com/lxc/lxc-ci/master/images/alpine.yaml
+  - curl -O https://raw.githubusercontent.com/puntillol59/distrobuilder-lxc/debian-distro/debian.yaml
 script:
-  - sudo distrobuilder build-lxc alpine.yaml -o image.release=3.12
+  - sudo distrobuilder build-lxc debian.yaml -o image.release=sid
   - ls
